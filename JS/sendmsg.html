@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML>
+<html>
+<body>
+	<p>  Hi</p>
+</body>
+<script>
+
+
+// $.ajax({
+//             url: '/signUpUser',
+//             data: "hello",
+//             type: 'POST',
+//             success: function(response) {
+//                 console.log(response);
+//             },
+//             error: function(error) {
+//                 console.log(error);
+//             }
+//         });
+// dsjafklj
+var ws = new WebSocket('ws://10.59.70.237:9000/')
+
+// var ws = new WebSocket("ws://localhost:9999/");
+ws.onopen = function() {
+  ws.send("Hello Anurag");
+};
+ws.onmessage = function (e) { alert(e.data); };
+ws.onclose = function() { };
+
+
+
+
+// var main = new UI.Card({
+//   title: 'Connected',
+//   icon: 'images/menu_icon.png',
+//   subtitle: 'Waiting for data'
+// });
+// main.show();
+</script>
+</html>
